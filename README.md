@@ -11,4 +11,4 @@ This application's code is available under a GPL v3 license. This excludes the i
 
 ## Attribution
 * This application uses the "Josefin Sans" font family from [Google Fonts](https://fonts.google.com)
-* The link to Stefan's course [on Udemy](https://www.udemy.com/course/complete-multi-modular-architecture-for-android-development/)
+* Stefan's course [on Udemy](https://www.udemy.com/course/complete-multi-modular-architecture-for-android-development/)
