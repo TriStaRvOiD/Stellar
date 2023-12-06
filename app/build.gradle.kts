@@ -45,9 +45,10 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.3"
+        kotlinCompilerExtensionVersion = "1.5.5"
     }
     packaging {
         resources {
@@ -59,7 +60,7 @@ android {
 dependencies {
 
     //Room
-    val roomVersion = "2.6.0"
+    val roomVersion = "2.6.1"
 
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
@@ -90,7 +91,7 @@ dependencies {
     implementation("com.maxkeppeler.sheets-compose-dialogs:clock:1.2.0")
 
     //Realm
-    implementation("io.realm.kotlin:library-sync:1.12.0")
+    implementation("io.realm.kotlin:library-sync:1.13.0")
 
     //Sheets
     implementation("com.maxkeppeler.sheets-compose-dialogs:core:1.2.0")
@@ -98,8 +99,8 @@ dependencies {
     implementation("com.maxkeppeler.sheets-compose-dialogs:clock:1.2.0")
 
     //Dagger hilt
-    implementation("com.google.dagger:hilt-android:2.48.1")
-    ksp("com.google.dagger:hilt-compiler:2.48.1")
+    implementation("com.google.dagger:hilt-android:2.49")
+    ksp("com.google.dagger:hilt-compiler:2.49")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
     implementation("androidx.hilt:hilt-common:1.1.0")
     ksp("androidx.hilt:hilt-compiler:1.1.0")
@@ -115,7 +116,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("androidx.activity:activity-compose:1.8.0")
+    implementation("androidx.activity:activity-compose:1.8.1")
     implementation("androidx.navigation:navigation-compose:2.7.5")
     implementation(platform("androidx.compose:compose-bom:2023.10.01"))
     implementation("androidx.compose.ui:ui")
