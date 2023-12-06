@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
             StellarTheme(dynamicColor = false) {
                 val navController = rememberNavController()
                 SetupNavGraph(
-                    startDestination = com.tristarvoid.stellar.getStartDestination(),
+                    startDestination = getStartDestination(),
                     navController = navController,
                     onDataLoaded = {
                         keepSplashOpened = false
