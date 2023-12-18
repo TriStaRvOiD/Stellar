@@ -48,7 +48,7 @@ android {
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.5"
+        kotlinCompilerExtensionVersion = "1.5.6"
     }
     packaging {
         resources {
@@ -83,7 +83,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:20.7.0")
 
     //Lottie
-    implementation("com.airbnb.android:lottie-compose:6.1.0")
+    implementation("com.airbnb.android:lottie-compose:6.2.0")
 
     //Sheets
     implementation("com.maxkeppeler.sheets-compose-dialogs:core:1.2.0")
@@ -107,7 +107,7 @@ dependencies {
 
     //Miscellaneous
 
-    implementation("com.github.stevdza-san:OneTapCompose:1.0.9")
+    implementation("com.github.stevdza-san:OneTapCompose:1.0.10")
     implementation("com.github.stevdza-san:MessageBarCompose:1.0.7.2")
 
     implementation("androidx.core:core-splashscreen:1.0.1")
@@ -117,7 +117,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.1")
-    implementation("androidx.navigation:navigation-compose:2.7.5")
+    implementation("androidx.navigation:navigation-compose:2.7.6")
     implementation(platform("androidx.compose:compose-bom:2023.10.01"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
