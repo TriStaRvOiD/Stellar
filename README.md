@@ -4,7 +4,7 @@
  ## Installation
 
 1. Clone the repository to your local machine: 
-```git clone https://github.com/TriStaRvOiD/Kasper.git```
+```git clone https://github.com/TriStaRvOiD/Stellar.git```
 2. Open the project in Android Studio.
 3. Build the project:
    - Click on the “Build” menu.
