@@ -27,7 +27,8 @@ import com.tristarvoid.stellar.presentation.screens.home.HomeScreen
 import com.tristarvoid.stellar.presentation.screens.home.HomeViewModel
 import com.tristarvoid.stellar.presentation.screens.write.WriteScreen
 import com.tristarvoid.stellar.presentation.screens.write.WriteViewModel
-import com.tristarvoid.stellar.util.Constants.WRITE_SCREEN_ARGUMENT_KEY
+import com.tristarvoid.util.Constants.WRITE_SCREEN_ARGUMENT_KEY
+import com.tristarvoid.util.Screen
 import io.realm.kotlin.mongodb.App
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
