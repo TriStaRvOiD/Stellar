@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("org.jetbrains.kotlin.plugin.compose")
     id("com.google.gms.google-services")
     id("com.google.dagger.hilt.android")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
@@ -36,19 +37,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
         isCoreLibraryDesugaringEnabled = true
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
+    kotlin {
+        jvmToolchain(17)
     }
     buildFeatures {
         compose = true
         buildConfig = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
     }
     packaging {
         resources {
@@ -59,78 +55,72 @@ android {
 
 dependencies {
 
-    //Room
-    val roomVersion = "2.6.1"
-
-    implementation("androidx.room:room-runtime:$roomVersion")
-    implementation("androidx.room:room-ktx:$roomVersion")
-    ksp("androidx.room:room-compiler:$roomVersion")
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
     //Coil
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation(libs.coil.compose)
 
     //Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-
-    //Rich Text Editor
-//    implementation("com.mohamedrejeb.richeditor:richeditor-compose:1.0.0-beta03")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
     //Firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.3.0"))
-    implementation("com.google.firebase:firebase-auth-ktx")
-    implementation("com.google.firebase:firebase-storage-ktx")
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.storage.ktx)
+    implementation(libs.play.services.auth)
 
     //Lottie
-    implementation("com.airbnb.android:lottie-compose:6.2.0")
+    implementation(libs.lottie.compose)
 
     //Sheets
-    implementation("com.maxkeppeler.sheets-compose-dialogs:core:1.2.0")
-    implementation("com.maxkeppeler.sheets-compose-dialogs:calendar:1.2.0")
-    implementation("com.maxkeppeler.sheets-compose-dialogs:clock:1.2.0")
+    implementation(libs.core)
+    implementation(libs.calendar)
+    implementation(libs.clock)
 
     //Realm
-    implementation("io.realm.kotlin:library-sync:1.13.0")
+    implementation(libs.library.sync)
 
     //Sheets
-    implementation("com.maxkeppeler.sheets-compose-dialogs:core:1.2.0")
-    implementation("com.maxkeppeler.sheets-compose-dialogs:calendar:1.2.0")
-    implementation("com.maxkeppeler.sheets-compose-dialogs:clock:1.2.0")
+    implementation(libs.core)
+    implementation(libs.calendar)
+    implementation(libs.clock)
 
     //Dagger hilt
-    implementation("com.google.dagger:hilt-android:2.50")
-    ksp("com.google.dagger:hilt-compiler:2.50")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-    implementation("androidx.hilt:hilt-common:1.1.0")
-    ksp("androidx.hilt:hilt-compiler:1.1.0")
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.hilt.common)
+    ksp(libs.androidx.hilt.compiler)
 
     //Miscellaneous
 
-    implementation("com.github.stevdza-san:OneTapCompose:1.0.10")
-    implementation("com.github.stevdza-san:MessageBarCompose:1.0.7.2")
+    implementation(libs.onetapcompose)
+    implementation(libs.messagebarcompose)
 
-    implementation("androidx.core:core-splashscreen:1.0.1")
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-    implementation("androidx.activity:activity-compose:1.8.2")
-    implementation("androidx.navigation:navigation-compose:2.7.6")
-    implementation(platform("androidx.compose:compose-bom:2024.01.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.navigation.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2024.01.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
 
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
 }

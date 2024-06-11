@@ -1,27 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    //Android
-    id("com.android.application") version "8.2.2" apply false
+    alias(libs.plugins.androidApplication) apply false
 
-    //Kotlin
-    id("org.jetbrains.kotlin.android") version "1.9.22" apply false
+    alias(libs.plugins.org.jetbrains.kotlin.android) apply false
 
-    //Realm
-    id("io.realm.kotlin") version "1.13.0" apply false
+    alias(libs.plugins.compose.compiler) apply false
 
-    //Dagger Hilt
-    id("com.google.dagger.hilt.android") version "2.50" apply false
+    alias(libs.plugins.daggerHilt) apply false
 
-    //GMS
-    id("com.google.gms.google-services") version "4.4.0" apply false
+    alias(libs.plugins.mongoDbRealm) apply false
 
-    //Key hider
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin") version "2.0.1" apply false
+    alias(libs.plugins.googlePlayServices) apply false
 
-    //Annotation Processing
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false //ksp
-}
+    alias(libs.plugins.googleSecrets) apply false
 
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+    alias(libs.plugins.googleKsp) apply false
 }
