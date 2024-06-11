@@ -123,4 +123,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
+
+    implementation(project(":core:ui"))
 }
