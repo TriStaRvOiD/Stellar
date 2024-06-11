@@ -36,7 +36,7 @@ fun AuthenticationContent(
             ) {
                 Image(
                     modifier = Modifier.size(120.dp),
-                    painter = painterResource(id = R.drawable.logo),
+                    painter = painterResource(id = com.tristarvoid.ui.R.drawable.logo),
                     contentDescription = "Logo"
                 )
                 Spacer(modifier = Modifier.height(20.dp))

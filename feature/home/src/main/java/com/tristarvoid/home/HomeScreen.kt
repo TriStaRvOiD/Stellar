@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.screens.home
+package com.tristarvoid.home
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -15,7 +15,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.tristarvoid.mongo.repository.Diaries
-import com.tristarvoid.stellar.R
 import com.tristarvoid.ui.components.LottieCreate
 import com.tristarvoid.util.model.RequestState
 import java.time.ZonedDateTime
@@ -113,14 +112,14 @@ fun NavigationDrawer(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(250.dp),
-                        painter = painterResource(id = R.drawable.logo),
+                        painter = painterResource(id = com.tristarvoid.ui.R.drawable.logo),
                         contentDescription = "Logo Image"
                     )
                     NavigationDrawerItem(
                         label = {
                             Row(modifier = Modifier.padding(horizontal = 12.dp)) {
                                 Icon(
-                                    painter = painterResource(id = R.drawable.google_logo),
+                                    painter = painterResource(id = com.tristarvoid.ui.R.drawable.google_logo),
                                     contentDescription = "Google Logo",
                                     tint = MaterialTheme.colorScheme.onSurface
                                 )

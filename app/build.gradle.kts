@@ -75,11 +75,6 @@ dependencies {
     //Lottie
     implementation(libs.lottie.compose)
 
-    //Sheets
-    implementation(libs.core)
-    implementation(libs.calendar)
-    implementation(libs.clock)
-
     //Realm
     implementation(libs.library.sync)
 
@@ -128,4 +123,5 @@ dependencies {
     implementation(project(":core:util"))
     implementation(project(":data:mongo"))
     implementation(project(":feature:auth"))
+    implementation(project(":feature:home"))
 }

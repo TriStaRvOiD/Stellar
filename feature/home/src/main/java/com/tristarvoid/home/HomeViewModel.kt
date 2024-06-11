@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.screens.home
+package com.tristarvoid.home
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue

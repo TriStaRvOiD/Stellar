@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.screens.home
+package com.tristarvoid.home
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -14,7 +14,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.tristarvoid.stellar.R
 import com.tristarvoid.util.model.Diary
 import com.tristarvoid.ui.components.LottieCreate
 import com.tristarvoid.ui.theme.JosefinSans

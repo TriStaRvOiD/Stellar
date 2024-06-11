@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.mongoDbRealm)
+    alias(libs.plugins.googlePlayServices)
     alias(libs.plugins.googleSecrets)
 }
 
@@ -45,7 +46,6 @@ dependencies {
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth.ktx)
-    implementation(libs.play.services.auth)
 
     implementation(libs.library.sync)
 

@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.screens.home
+package com.tristarvoid.home
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
