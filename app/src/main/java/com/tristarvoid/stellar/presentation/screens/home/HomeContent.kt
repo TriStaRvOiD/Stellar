@@ -16,9 +16,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.tristarvoid.stellar.R
 import com.tristarvoid.util.model.Diary
-import com.tristarvoid.ui.components.DiaryHolder
 import com.tristarvoid.ui.components.LottieCreate
 import com.tristarvoid.ui.theme.JosefinSans
+import com.tristarvoid.util.DiaryHolder
 import java.time.LocalDate
 
 @OptIn(ExperimentalFoundationApi::class)

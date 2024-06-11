@@ -3,18 +3,21 @@ package com.tristarvoid.stellar
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.core.net.toUri
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.rememberNavController
 import com.google.firebase.FirebaseApp
-import com.tristarvoid.stellar.data.database.ImageToDeleteDao
-import com.tristarvoid.stellar.data.database.ImageToUploadDao
-import com.tristarvoid.stellar.navigation.Screen
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storageMetadata
+import com.tristarvoid.mongo.database.ImageToDeleteDao
+import com.tristarvoid.mongo.database.ImageToUploadDao
+import com.tristarvoid.mongo.database.entity.ImageToDelete
+import com.tristarvoid.mongo.database.entity.ImageToUpload
 import com.tristarvoid.stellar.navigation.SetupNavGraph
 import com.tristarvoid.ui.theme.StellarTheme
-import com.tristarvoid.stellar.util.retryDeletingImageFromFirebase
-import com.tristarvoid.stellar.util.retryUploadingImageToFirebase
+import com.tristarvoid.util.Screen
 import dagger.hilt.android.AndroidEntryPoint
 import io.realm.kotlin.mongodb.App
 import kotlinx.coroutines.CoroutineScope
@@ -94,4 +97,25 @@ private fun getStartDestination(): String {
     val user = App.create(BuildConfig.APP_ID).currentUser
     return if ((user != null) && user.loggedIn) Screen.Home.route
     else Screen.Authentication.route
+}
+
+private fun retryUploadingImageToFirebase(
+    imageToUpload: ImageToUpload,
+    onSuccess: () -> Unit
+) {
+    val storage = FirebaseStorage.getInstance().reference
+    storage.child(imageToUpload.remoteImagePath).putFile(
+        imageToUpload.imageUri.toUri(),
+        storageMetadata { },
+        imageToUpload.sessionUri.toUri()
+    ).addOnSuccessListener { onSuccess() }
+}
+
+private fun retryDeletingImageFromFirebase(
+    imageToDelete: ImageToDelete,
+    onSuccess: () -> Unit
+) {
+    val storage = FirebaseStorage.getInstance().reference
+    storage.child(imageToDelete.remoteImagePath).delete()
+        .addOnSuccessListener { onSuccess() }
 }

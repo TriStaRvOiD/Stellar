@@ -23,11 +23,11 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.tristarvoid.ui.GalleryImage
+import com.tristarvoid.ui.GalleryState
+import com.tristarvoid.util.GalleryUploader
 import com.tristarvoid.util.model.Diary
-import com.tristarvoid.stellar.model.GalleryImage
-import com.tristarvoid.stellar.model.GalleryState
 import com.tristarvoid.util.model.Mood
-import com.tristarvoid.ui.components.GalleryUploader
 import io.realm.kotlin.ext.toRealmList
 import kotlinx.coroutines.launch
 
@@ -80,7 +80,7 @@ fun WriteContent(
                     AsyncImage(
                         modifier = Modifier.size(120.dp),
                         model = ImageRequest.Builder(LocalContext.current)
-                            .data(Mood.values()[page].icon)
+                            .data(Mood.entries[page].icon)
                             .crossfade(true)
                             .build(),
                         contentDescription = "Mood Image"

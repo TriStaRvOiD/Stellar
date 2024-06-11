@@ -32,7 +32,6 @@ roomVersion = "2.6.1"
 secretsPluginVersion = "2.0.1"
 kspVersion = "2.0.0-1.0.22"
 appcompatVersion = "1.7.0"
-materialVersion = "1.12.0"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
@@ -78,7 +77,6 @@ onetapcompose = { module = "com.github.stevdza-san:OneTapCompose", version.ref =
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuthVersion" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
-material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "androidGradleVersion" }

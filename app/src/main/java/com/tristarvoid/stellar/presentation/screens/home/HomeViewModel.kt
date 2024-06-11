@@ -8,16 +8,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
+import com.tristarvoid.mongo.database.ImageToDeleteDao
+import com.tristarvoid.mongo.database.entity.ImageToDelete
+import com.tristarvoid.mongo.repository.Diaries
+import com.tristarvoid.mongo.repository.MongoDB
 import com.tristarvoid.util.connectivity.ConnectivityObserver
 import com.tristarvoid.util.connectivity.NetworkConnectivityObserver
-import com.tristarvoid.stellar.data.database.ImageToDeleteDao
-import com.tristarvoid.stellar.data.database.entity.ImageToDelete
-import com.tristarvoid.stellar.data.repository.Diaries
-import com.tristarvoid.stellar.data.repository.MongoDB
 import com.tristarvoid.util.model.RequestState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.time.ZonedDateTime
 import javax.inject.Inject
 

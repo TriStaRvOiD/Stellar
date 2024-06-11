@@ -3,8 +3,17 @@ package com.tristarvoid.stellar.navigation
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.rememberDrawerState
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -17,18 +26,19 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.stevdzasan.messagebar.rememberMessageBarState
 import com.stevdzasan.onetap.rememberOneTapSignInState
+import com.tristarvoid.auth.AuthenticationScreen
+import com.tristarvoid.auth.AuthenticationViewModel
+import com.tristarvoid.auth.navigation.authenticationRoute
 import com.tristarvoid.stellar.BuildConfig
-import com.tristarvoid.util.model.Mood
-import com.tristarvoid.util.model.RequestState
-import com.tristarvoid.ui.components.DisplayAlertDialog
-import com.tristarvoid.stellar.presentation.screens.auth.AuthenticationScreen
-import com.tristarvoid.stellar.presentation.screens.auth.AuthenticationViewModel
 import com.tristarvoid.stellar.presentation.screens.home.HomeScreen
 import com.tristarvoid.stellar.presentation.screens.home.HomeViewModel
 import com.tristarvoid.stellar.presentation.screens.write.WriteScreen
 import com.tristarvoid.stellar.presentation.screens.write.WriteViewModel
+import com.tristarvoid.ui.components.DisplayAlertDialog
 import com.tristarvoid.util.Constants.WRITE_SCREEN_ARGUMENT_KEY
 import com.tristarvoid.util.Screen
+import com.tristarvoid.util.model.Mood
+import com.tristarvoid.util.model.RequestState
 import io.realm.kotlin.mongodb.App
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -69,57 +79,6 @@ fun SetupNavGraph(
             navigateBack = {
                 navController.popBackStack()
             }
-        )
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-fun NavGraphBuilder.authenticationRoute(
-    navigateToHome: () -> Unit,
-    onDataLoaded: () -> Unit
-) {
-    composable(route = Screen.Authentication.route) {
-        val viewModel: AuthenticationViewModel = viewModel()
-        val authenticated by viewModel.authenticated
-        val loadingState by viewModel.loadingState
-        val oneTapState = rememberOneTapSignInState()
-        val messageBarState = rememberMessageBarState()
-
-        LaunchedEffect(key1 = Unit) {
-            onDataLoaded()
-        }
-
-        AuthenticationScreen(
-            authenticated = authenticated,
-            loadingState = loadingState,
-            oneTapState = oneTapState,
-            messageBarState = messageBarState,
-            onButtonClicked = {
-                oneTapState.open()
-                viewModel.setLoading(true)
-            },
-            onSuccessfulFirebaseSignIn = { tokenId ->
-                viewModel.signInWithMongoAtlas(
-                    tokenId = tokenId,
-                    onSuccess = {
-                        messageBarState.addSuccess("Successfully Authenticated!")
-                        viewModel.setLoading(false)
-                    },
-                    onError = {
-                        messageBarState.addError(it)
-                        viewModel.setLoading(false)
-                    }
-                )
-            },
-            onFailedFirebaseSignIn = {
-                messageBarState.addError(it)
-                viewModel.setLoading(false)
-            },
-            onDialogDismissed = { message ->
-                messageBarState.addError(Exception(message))
-                viewModel.setLoading(false)
-            },
-            navigateToHome = navigateToHome
         )
     }
 }

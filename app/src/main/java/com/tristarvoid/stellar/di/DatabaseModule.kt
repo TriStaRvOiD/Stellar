@@ -2,9 +2,9 @@ package com.tristarvoid.stellar.di
 
 import android.content.Context
 import androidx.room.Room
+import com.tristarvoid.mongo.database.ImagesDatabase
 import com.tristarvoid.util.connectivity.NetworkConnectivityObserver
-import com.tristarvoid.stellar.data.database.ImagesDatabase
-import com.tristarvoid.stellar.util.Constants.IMAGES_DATABASE
+import com.tristarvoid.util.Constants.IMAGES_DATABASE
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
