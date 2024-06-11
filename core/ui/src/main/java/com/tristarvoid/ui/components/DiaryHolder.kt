@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.components
+package com.tristarvoid.ui.components
 
 import android.net.Uri
 import android.widget.Toast
@@ -27,8 +27,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import com.tristarvoid.stellar.model.Diary
 import com.tristarvoid.stellar.model.Mood
-import com.tristarvoid.stellar.ui.theme.Elevation
-import com.tristarvoid.stellar.ui.theme.JosefinSans
+import com.tristarvoid.ui.theme.Elevation
+import com.tristarvoid.ui.theme.JosefinSans
 import com.tristarvoid.stellar.util.fetchImagesFromFirebase
 import com.tristarvoid.stellar.util.toInstant
 import io.realm.kotlin.ext.realmListOf

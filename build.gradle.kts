@@ -15,4 +15,6 @@ plugins {
     alias(libs.plugins.googleSecrets) apply false
 
     alias(libs.plugins.googleKsp) apply false
+
+    alias(libs.plugins.android.library) apply false
 }

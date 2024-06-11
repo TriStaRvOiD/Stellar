@@ -12,7 +12,7 @@ import com.tristarvoid.stellar.data.database.ImageToDeleteDao
 import com.tristarvoid.stellar.data.database.ImageToUploadDao
 import com.tristarvoid.stellar.navigation.Screen
 import com.tristarvoid.stellar.navigation.SetupNavGraph
-import com.tristarvoid.stellar.ui.theme.StellarTheme
+import com.tristarvoid.ui.theme.StellarTheme
 import com.tristarvoid.stellar.util.retryDeletingImageFromFirebase
 import com.tristarvoid.stellar.util.retryUploadingImageToFirebase
 import dagger.hilt.android.AndroidEntryPoint

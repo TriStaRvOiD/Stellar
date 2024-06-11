@@ -2,7 +2,22 @@ package com.tristarvoid.stellar.model
 
 import androidx.compose.ui.graphics.Color
 import com.tristarvoid.stellar.R
-import com.tristarvoid.stellar.ui.theme.*
+import com.tristarvoid.ui.theme.AngryColor
+import com.tristarvoid.ui.theme.AwfulColor
+import com.tristarvoid.ui.theme.BoredColor
+import com.tristarvoid.ui.theme.CalmColor
+import com.tristarvoid.ui.theme.DepressedColor
+import com.tristarvoid.ui.theme.DisappointedColor
+import com.tristarvoid.ui.theme.HappyColor
+import com.tristarvoid.ui.theme.HumorousColor
+import com.tristarvoid.ui.theme.LonelyColor
+import com.tristarvoid.ui.theme.MysteriousColor
+import com.tristarvoid.ui.theme.NeutralColor
+import com.tristarvoid.ui.theme.RomanticColor
+import com.tristarvoid.ui.theme.ShamefulColor
+import com.tristarvoid.ui.theme.SurprisedColor
+import com.tristarvoid.ui.theme.SuspiciousColor
+import com.tristarvoid.ui.theme.TenseColor
 
 enum class Mood(
     val icon: Int,

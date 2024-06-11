@@ -20,7 +20,7 @@ import com.stevdzasan.onetap.rememberOneTapSignInState
 import com.tristarvoid.stellar.BuildConfig
 import com.tristarvoid.stellar.model.Mood
 import com.tristarvoid.stellar.model.RequestState
-import com.tristarvoid.stellar.presentation.components.DisplayAlertDialog
+import com.tristarvoid.ui.components.DisplayAlertDialog
 import com.tristarvoid.stellar.presentation.screens.auth.AuthenticationScreen
 import com.tristarvoid.stellar.presentation.screens.auth.AuthenticationViewModel
 import com.tristarvoid.stellar.presentation.screens.home.HomeScreen

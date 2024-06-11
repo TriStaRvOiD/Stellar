@@ -11,7 +11,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.tristarvoid.stellar.R
-import com.tristarvoid.stellar.presentation.components.GoogleButton
+import com.tristarvoid.ui.components.GoogleButton
 
 @Composable
 fun AuthenticationContent(

@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.ui.theme
+package com.tristarvoid.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.tristarvoid.stellar.R
+import com.tristarvoid.ui.R
 
 val JosefinSans = FontFamily(
     Font(R.font.josefinsans_regular),

@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.components
+package com.tristarvoid.ui.components
 
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable

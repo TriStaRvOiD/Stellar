@@ -20,8 +20,8 @@ import com.maxkeppeler.sheets.calendar.models.CalendarSelection
 import com.maxkeppeler.sheets.clock.ClockDialog
 import com.maxkeppeler.sheets.clock.models.ClockSelection
 import com.tristarvoid.stellar.model.Diary
-import com.tristarvoid.stellar.presentation.components.DisplayAlertDialog
-import com.tristarvoid.stellar.ui.theme.JosefinSans
+import com.tristarvoid.ui.components.DisplayAlertDialog
+import com.tristarvoid.ui.theme.JosefinSans
 import com.tristarvoid.stellar.util.toInstant
 import java.time.LocalDate
 import java.time.LocalTime

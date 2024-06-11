@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.model
+package com.tristarvoid.ui
 
 import android.net.Uri
 import androidx.compose.runtime.Composable

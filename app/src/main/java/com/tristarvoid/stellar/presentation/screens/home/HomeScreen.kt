@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.tristarvoid.stellar.R
 import com.tristarvoid.stellar.data.repository.Diaries
 import com.tristarvoid.stellar.model.RequestState
-import com.tristarvoid.stellar.presentation.components.LottieCreate
+import com.tristarvoid.ui.components.LottieCreate
 import java.time.ZonedDateTime
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Stellar"
 include(":app")
+include(":core:ui")

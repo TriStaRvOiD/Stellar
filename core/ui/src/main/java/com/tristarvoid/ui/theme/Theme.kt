@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.ui.theme
+package com.tristarvoid.ui.theme
 
 import android.app.Activity
 import android.os.Build

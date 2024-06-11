@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.components
+package com.tristarvoid.ui.components
 
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -24,9 +24,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.tristarvoid.stellar.model.GalleryImage
-import com.tristarvoid.stellar.model.GalleryState
-import com.tristarvoid.stellar.ui.theme.Elevation
+import com.tristarvoid.ui.GalleryImage
+import com.tristarvoid.ui.GalleryState
+import com.tristarvoid.ui.theme.Elevation
 import kotlin.math.max
 
 @Composable
