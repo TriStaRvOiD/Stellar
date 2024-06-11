@@ -31,7 +31,6 @@ retrofitVersion = "2.11.0"
 roomVersion = "2.6.1"
 secretsPluginVersion = "2.0.1"
 kspVersion = "2.0.0-1.0.22"
-appcompatVersion = "1.7.0"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
@@ -44,16 +43,11 @@ androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref =
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationComposeVersion" }
 androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junit" }
 androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtxVersion" }
-androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
-androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtxVersion" }
-androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
 androidx-material3 = { module = "androidx.compose.material3:material3" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationComposeVersion" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomVersion" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomVersion" }
-androidx-ui = { module = "androidx.compose.ui:ui" }
-androidx-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
 androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
@@ -76,7 +70,6 @@ messagebarcompose = { module = "com.github.stevdza-san:MessageBarCompose", versi
 onetapcompose = { module = "com.github.stevdza-san:OneTapCompose", version.ref = "onetapcomposeVersion" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuthVersion" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "androidGradleVersion" }

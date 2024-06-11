@@ -55,6 +55,13 @@ android {
 
 dependencies {
 
+    implementation(project(":core:ui"))
+    implementation(project(":core:util"))
+    implementation(project(":data:mongo"))
+    implementation(project(":feature:auth"))
+    implementation(project(":feature:home"))
+    implementation(project(":feature:write"))
+
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
@@ -76,18 +83,7 @@ dependencies {
     ksp(libs.androidx.hilt.compiler)
 
     implementation(libs.androidx.core.splashscreen)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.lifecycle.runtime.compose)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.navigation.compose)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -98,11 +94,4 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
-
-    implementation(project(":core:ui"))
-    implementation(project(":core:util"))
-    implementation(project(":data:mongo"))
-    implementation(project(":feature:auth"))
-    implementation(project(":feature:home"))
-    implementation(project(":feature:write"))
 }
