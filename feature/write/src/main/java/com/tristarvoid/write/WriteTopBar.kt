@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.screens.write
+package com.tristarvoid.write
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -43,7 +43,7 @@ import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun WriteTopBar(
+internal fun WriteTopBar(
     selectedDiary: Diary?,
     moodName: () -> String,
     onDateTimeUpdated: (ZonedDateTime) -> Unit,
@@ -170,7 +170,7 @@ fun WriteTopBar(
 }
 
 @Composable
-fun DownMenu(
+internal fun DownMenu(
     selectedDiary: Diary?,
     onDeleteConfirmed: () -> Unit,
     onSentimentDetect: () -> Unit

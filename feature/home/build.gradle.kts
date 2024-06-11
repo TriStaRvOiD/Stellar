@@ -2,9 +2,10 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.daggerHilt)
     alias(libs.plugins.mongoDbRealm)
-    alias(libs.plugins.googlePlayServices)
     alias(libs.plugins.googleSecrets)
+    alias(libs.plugins.googleKsp)
 }
 
 android {
@@ -51,7 +52,11 @@ dependencies {
     implementation(libs.calendar)
     implementation(libs.clock)
 
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.hilt.common)
+    ksp(libs.androidx.hilt.compiler)
 
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)

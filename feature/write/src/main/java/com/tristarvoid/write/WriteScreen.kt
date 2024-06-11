@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.screens.write
+package com.tristarvoid.write
 
 import android.annotation.SuppressLint
 import android.net.Uri
@@ -45,7 +45,7 @@ import java.time.ZonedDateTime
 @OptIn(ExperimentalFoundationApi::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun WriteScreen(
+internal fun WriteScreen(
     uiState: UiState,
     pagerState: PagerState,
     galleryState: GalleryState,
@@ -111,7 +111,7 @@ fun WriteScreen(
 }
 
 @Composable
-fun ZoomableImage(
+internal fun ZoomableImage(
     selectedGalleryImage: GalleryImage,
     onCloseClicked: () -> Unit,
     onDeleteClicked: () -> Unit

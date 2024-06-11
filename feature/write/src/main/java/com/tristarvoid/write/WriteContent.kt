@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.screens.write
+package com.tristarvoid.write
 
 import android.net.Uri
 import android.widget.Toast
@@ -33,7 +33,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun WriteContent(
+internal fun WriteContent(
     uiState: UiState,
     pagerState: PagerState,
     galleryState: GalleryState,

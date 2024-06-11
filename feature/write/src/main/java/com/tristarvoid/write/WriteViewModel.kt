@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.presentation.screens.write
+package com.tristarvoid.write
 
 import android.net.Uri
 import android.util.Log
@@ -17,7 +17,6 @@ import com.tristarvoid.mongo.database.ImageToUploadDao
 import com.tristarvoid.mongo.database.entity.ImageToDelete
 import com.tristarvoid.mongo.database.entity.ImageToUpload
 import com.tristarvoid.mongo.repository.MongoDB
-import com.tristarvoid.stellar.retrofit.emotion.EmotionApi
 import com.tristarvoid.ui.GalleryImage
 import com.tristarvoid.ui.GalleryState
 import com.tristarvoid.util.Constants.WRITE_SCREEN_ARGUMENT_KEY
@@ -26,6 +25,7 @@ import com.tristarvoid.util.model.Diary
 import com.tristarvoid.util.model.Mood
 import com.tristarvoid.util.model.RequestState
 import com.tristarvoid.util.toRealmInstant
+import com.tristarvoid.write.retrofit.emotion.EmotionApi
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.realm.kotlin.types.RealmInstant
 import kotlinx.coroutines.Dispatchers
@@ -40,7 +40,7 @@ import java.time.ZonedDateTime
 import javax.inject.Inject
 
 @HiltViewModel
-class WriteViewModel @Inject constructor(
+internal class WriteViewModel @Inject constructor(
     private val emotionApi: EmotionApi,
     private val savedStateHandle: SavedStateHandle,
     private val imageToUploadDao: ImageToUploadDao,
@@ -295,7 +295,7 @@ class WriteViewModel @Inject constructor(
 
 }
 
-data class UiState(
+internal data class UiState(
     val selectedDiaryId: String? = null,
     val selectedDiary: Diary? = null,
     val title: String = "",

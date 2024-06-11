@@ -1,6 +1,6 @@
 package com.tristarvoid.stellar.di
 
-import com.tristarvoid.stellar.retrofit.emotion.EmotionApi
+import com.tristarvoid.write.retrofit.emotion.EmotionApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

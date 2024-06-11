@@ -59,41 +59,21 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
-    //Coil
-    implementation(libs.coil.compose)
-
-    //Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
 
-    //Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.storage.ktx)
     implementation(libs.play.services.auth)
 
-    //Lottie
-    implementation(libs.lottie.compose)
-
-    //Realm
     implementation(libs.library.sync)
 
-    //Sheets
-    implementation(libs.core)
-    implementation(libs.calendar)
-    implementation(libs.clock)
-
-    //Dagger hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.hilt.common)
     ksp(libs.androidx.hilt.compiler)
-
-    //Miscellaneous
-
-    implementation(libs.onetapcompose)
-    implementation(libs.messagebarcompose)
 
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)
@@ -124,4 +104,5 @@ dependencies {
     implementation(project(":data:mongo"))
     implementation(project(":feature:auth"))
     implementation(project(":feature:home"))
+    implementation(project(":feature:write"))
 }
