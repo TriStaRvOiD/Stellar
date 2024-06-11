@@ -17,11 +17,11 @@ import com.tristarvoid.stellar.data.database.ImageToUploadDao
 import com.tristarvoid.stellar.data.database.entity.ImageToDelete
 import com.tristarvoid.stellar.data.database.entity.ImageToUpload
 import com.tristarvoid.stellar.data.repository.MongoDB
-import com.tristarvoid.stellar.model.Diary
+import com.tristarvoid.util.model.Diary
 import com.tristarvoid.stellar.model.GalleryImage
 import com.tristarvoid.stellar.model.GalleryState
-import com.tristarvoid.stellar.model.Mood
-import com.tristarvoid.stellar.model.RequestState
+import com.tristarvoid.util.model.Mood
+import com.tristarvoid.util.model.RequestState
 import com.tristarvoid.stellar.retrofit.emotion.EmotionApi
 import com.tristarvoid.stellar.util.Constants.WRITE_SCREEN_ARGUMENT_KEY
 import com.tristarvoid.stellar.util.fetchImagesFromFirebase

@@ -22,10 +22,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.tristarvoid.stellar.model.Diary
+import com.tristarvoid.util.model.Diary
 import com.tristarvoid.stellar.model.GalleryImage
 import com.tristarvoid.stellar.model.GalleryState
-import com.tristarvoid.stellar.model.Mood
+import com.tristarvoid.util.model.Mood
 import java.time.ZonedDateTime
 
 @OptIn(ExperimentalFoundationApi::class)

@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import com.tristarvoid.stellar.R
 import com.tristarvoid.stellar.data.repository.Diaries
-import com.tristarvoid.stellar.model.RequestState
+import com.tristarvoid.util.model.RequestState
 import com.tristarvoid.ui.components.LottieCreate
 import java.time.ZonedDateTime
 

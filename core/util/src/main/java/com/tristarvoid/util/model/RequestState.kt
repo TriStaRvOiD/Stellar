@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.model
+package com.tristarvoid.util.model
 
 sealed class RequestState<out T> {
     data object Idle : RequestState<Nothing>()

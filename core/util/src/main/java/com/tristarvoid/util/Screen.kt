@@ -1,6 +1,6 @@
-package com.tristarvoid.stellar.navigation
+package com.tristarvoid.util
 
-import com.tristarvoid.stellar.util.Constants.WRITE_SCREEN_ARGUMENT_KEY
+import com.tristarvoid.util.Constants.WRITE_SCREEN_ARGUMENT_KEY
 
 sealed class Screen(val route: String) {
     data object Authentication : Screen(route = "authentication_screen")

@@ -19,7 +19,7 @@ import com.maxkeppeler.sheets.calendar.models.CalendarConfig
 import com.maxkeppeler.sheets.calendar.models.CalendarSelection
 import com.maxkeppeler.sheets.clock.ClockDialog
 import com.maxkeppeler.sheets.clock.models.ClockSelection
-import com.tristarvoid.stellar.model.Diary
+import com.tristarvoid.util.model.Diary
 import com.tristarvoid.ui.components.DisplayAlertDialog
 import com.tristarvoid.ui.theme.JosefinSans
 import com.tristarvoid.stellar.util.toInstant

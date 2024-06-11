@@ -2,7 +2,7 @@ package com.tristarvoid.stellar.di
 
 import android.content.Context
 import androidx.room.Room
-import com.tristarvoid.stellar.connectivity.NetworkConnectivityObserver
+import com.tristarvoid.util.connectivity.NetworkConnectivityObserver
 import com.tristarvoid.stellar.data.database.ImagesDatabase
 import com.tristarvoid.stellar.util.Constants.IMAGES_DATABASE
 import dagger.Module

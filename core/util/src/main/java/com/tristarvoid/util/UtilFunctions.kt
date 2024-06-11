@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.util
+package com.tristarvoid.util
 
 import android.net.Uri
 import android.util.Log

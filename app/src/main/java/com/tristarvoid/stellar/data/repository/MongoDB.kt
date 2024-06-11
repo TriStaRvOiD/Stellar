@@ -1,12 +1,11 @@
 package com.tristarvoid.stellar.data.repository
 
 import com.tristarvoid.stellar.BuildConfig
-import com.tristarvoid.stellar.model.Diary
-import com.tristarvoid.stellar.model.RequestState
+import com.tristarvoid.util.model.Diary
+import com.tristarvoid.util.model.RequestState
 import com.tristarvoid.stellar.util.toInstant
 import io.realm.kotlin.Realm
 import io.realm.kotlin.ext.query
-import io.realm.kotlin.log.LogLevel
 import io.realm.kotlin.mongodb.App
 import io.realm.kotlin.mongodb.sync.SyncConfiguration
 import io.realm.kotlin.query.Sort

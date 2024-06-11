@@ -1,12 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.mongoDbRealm)
 }
 
 android {
-    namespace = "com.tristarvoid.ui"
+    namespace = "com.tristarvoid.util"
     compileSdk = ProjectConfig.COMPILE_SDK
 
     defaultConfig {
@@ -31,34 +30,21 @@ android {
     kotlin {
         jvmToolchain(ProjectConfig.JAVA_VERSION)
     }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
 
-    implementation(libs.coil.compose)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.storage.ktx)
 
     implementation(libs.library.sync)
 
-    implementation(libs.lottie.compose)
-
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.navigation.compose)
     implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    implementation(libs.androidx.activity.compose)
 
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
-    implementation(project(":core:util"))
+    implementation(project(":core:ui"))
 }

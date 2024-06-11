@@ -1,8 +1,9 @@
-package com.tristarvoid.stellar.connectivity
+package com.tristarvoid.util.connectivity
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
+import com.tristarvoid.util.connectivity.ConnectivityObserver
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow

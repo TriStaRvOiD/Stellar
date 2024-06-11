@@ -1,6 +1,6 @@
-package com.tristarvoid.stellar.model
+package com.tristarvoid.util.model
 
-import com.tristarvoid.stellar.util.toRealmInstant
+import com.tristarvoid.util.toRealmInstant
 import io.realm.kotlin.ext.realmListOf
 import io.realm.kotlin.types.RealmInstant
 import io.realm.kotlin.types.RealmList

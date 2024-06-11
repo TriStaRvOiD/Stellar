@@ -25,12 +25,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
-import com.tristarvoid.stellar.model.Diary
-import com.tristarvoid.stellar.model.Mood
+import com.tristarvoid.util.model.Diary
+import com.tristarvoid.util.model.Mood
 import com.tristarvoid.ui.theme.Elevation
 import com.tristarvoid.ui.theme.JosefinSans
-import com.tristarvoid.stellar.util.fetchImagesFromFirebase
-import com.tristarvoid.stellar.util.toInstant
+import com.tristarvoid.util.fetchImagesFromFirebase
+import com.tristarvoid.util.toInstant
 import io.realm.kotlin.ext.realmListOf
 import java.time.Instant
 import java.time.ZoneId

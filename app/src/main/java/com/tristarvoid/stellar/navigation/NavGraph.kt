@@ -18,8 +18,8 @@ import androidx.navigation.navArgument
 import com.stevdzasan.messagebar.rememberMessageBarState
 import com.stevdzasan.onetap.rememberOneTapSignInState
 import com.tristarvoid.stellar.BuildConfig
-import com.tristarvoid.stellar.model.Mood
-import com.tristarvoid.stellar.model.RequestState
+import com.tristarvoid.util.model.Mood
+import com.tristarvoid.util.model.RequestState
 import com.tristarvoid.ui.components.DisplayAlertDialog
 import com.tristarvoid.stellar.presentation.screens.auth.AuthenticationScreen
 import com.tristarvoid.stellar.presentation.screens.auth.AuthenticationViewModel

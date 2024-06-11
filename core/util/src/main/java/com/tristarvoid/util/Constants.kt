@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.util
+package com.tristarvoid.util
 
 object Constants {
 

@@ -1,4 +1,4 @@
-package com.tristarvoid.stellar.connectivity
+package com.tristarvoid.util.connectivity
 
 import kotlinx.coroutines.flow.Flow
 

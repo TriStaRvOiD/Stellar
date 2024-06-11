@@ -8,13 +8,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
-import com.tristarvoid.stellar.connectivity.ConnectivityObserver
-import com.tristarvoid.stellar.connectivity.NetworkConnectivityObserver
+import com.tristarvoid.util.connectivity.ConnectivityObserver
+import com.tristarvoid.util.connectivity.NetworkConnectivityObserver
 import com.tristarvoid.stellar.data.database.ImageToDeleteDao
 import com.tristarvoid.stellar.data.database.entity.ImageToDelete
 import com.tristarvoid.stellar.data.repository.Diaries
 import com.tristarvoid.stellar.data.repository.MongoDB
-import com.tristarvoid.stellar.model.RequestState
+import com.tristarvoid.util.model.RequestState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.debounce

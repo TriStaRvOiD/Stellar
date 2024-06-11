@@ -1,7 +1,7 @@
 package com.tristarvoid.stellar.data.repository
 
-import com.tristarvoid.stellar.model.Diary
-import com.tristarvoid.stellar.model.RequestState
+import com.tristarvoid.util.model.Diary
+import com.tristarvoid.util.model.RequestState
 import kotlinx.coroutines.flow.Flow
 import org.mongodb.kbson.ObjectId
 import java.time.LocalDate
