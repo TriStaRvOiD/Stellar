@@ -11,12 +11,12 @@ plugins {
 
 android {
     namespace = "com.tristarvoid.stellar"
-    compileSdk = 34
+    compileSdk = ProjectConfig.COMPILE_SDK
 
     defaultConfig {
         applicationId = "com.tristarvoid.stellar"
-        minSdk = 24
-        targetSdk = 34
+        minSdk = ProjectConfig.MIN_SDK
+        targetSdk = ProjectConfig.TARGET_SDK
         versionCode = 1
         versionName = "1.0"
 
@@ -40,7 +40,7 @@ android {
         isCoreLibraryDesugaringEnabled = true
     }
     kotlin {
-        jvmToolchain(17)
+        jvmToolchain(ProjectConfig.JAVA_VERSION)
     }
     buildFeatures {
         compose = true
