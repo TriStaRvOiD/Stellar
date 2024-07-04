@@ -1,6 +1,9 @@
 # Stellar
  A diary app made as part of the course on Udemy by [Stefan Jovanovic](https://github.com/stevdza-san)
 
+ ## Disclaimer
+In it's current state, this application does not include any form of encryption for the storage of diary entries in the server.
+
  ## Installation
 
 1. Clone the repository to your local machine: 
